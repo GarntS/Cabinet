@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 const siteRouter = require(__dirname+ '/app/siteRouter.js');
 
 app.use('/', siteRouter);
-app.use(express.static('/public', __dirname+ '/public/'));
 
 // Actually start the server
 app.listen(process.env.PORT || 3000, () => {
