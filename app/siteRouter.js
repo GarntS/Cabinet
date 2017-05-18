@@ -23,7 +23,7 @@ const uploadMiddleware = multer({
     bucket: process.env.S3_BUCKET,
     key: (req, file, cb) => {
       const extension = '.'+ _.last(_.split(file.originalname, '.'));
-      cb(null, req.body.albumName+ uuid()+ extension);
+      cb(null, req.body.albumName+ '-'+ uuid()+ extension);
     }
   })
 });
