@@ -8,7 +8,7 @@ const express = require('express'),
       path = require('path'),
       multer = require('multer'),
       bodyParser = require('body-parser'),
-      _ = require('lodash');
+      uuid = require('uuid');
 
 const app = express();
 

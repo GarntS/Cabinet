@@ -22,15 +22,14 @@ const uploadMiddleware = multer({
     acl: 'private',
     bucket: process.env.S3_BUCKET,
     key: (req, file, cb) => {
-      const fileName = req.body.albumName+
-        moment().format('MM-DD-YYYY-h-mm-ss');
-      cb(null, fileName);
+      cb(null, req.body.albumName+ uuid());
     }
   })
 });
 
 router.post('/uploadPhoto', uploadMiddleware.any(), (req, res) => {
   console.log('Ran middleware.');
+  res.send('Upload successful!');
 });
 
 module.exports = router;
