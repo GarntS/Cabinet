@@ -22,7 +22,8 @@ const uploadMiddleware = multer({
     acl: 'private',
     bucket: process.env.S3_BUCKET,
     key: (req, file, cb) => {
-      cb(null, req.body.albumName+ uuid());
+      const extension = '.'+ _.last(_.split(file.originalname, '.'));
+      cb(null, req.body.albumName+ uuid()+ extension);
     }
   })
 });
