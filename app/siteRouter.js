@@ -29,7 +29,7 @@ const uploadMiddleware = multer({
   })
 });
 
-router.get('/photoUpload', uploadMiddleware.any(), (req, res) => {
+router.get('/uploadPhoto', uploadMiddleware.any(), (req, res) => {
   console.log('Ran middleware.');
 });
 
