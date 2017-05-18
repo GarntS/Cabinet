@@ -8,7 +8,7 @@ const express = require('express'),
       aws = require('aws-sdk'),
       multerS3 = require('multer-s3'),
       _ = require('lodash'),
-      moment = require('moment');
+      uuid = require('uuid');
 
 const router = express.Router();
 const s3 = new aws.S3({
