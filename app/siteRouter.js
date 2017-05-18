@@ -29,11 +29,11 @@ const uploadMiddleware = multer({
   })
 });
 
-app.get('/', (req, res) => {
-  res.sendfile('public/test.html', {root: __dirname})
+router.get('/', (req, res) => {
+  res.sendfile('public/test.html', {root: __dirname});
 });
 
-app.get('/photoUpload', uploadMiddleware, (req, res) => {
+router.get('/photoUpload', uploadMiddleware, (req, res) => {
   console.log('Ran middleware.');
 });
 
