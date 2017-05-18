@@ -1,0 +1,27 @@
+{
+  "name": "cabinet",
+  "description": "A hostable SPA used to manage file transfers from design clients.",
+  "main": "index.js",
+  "authors": [
+    "Garnt"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "file",
+    "drop",
+    "transfer",
+    "service",
+    "nodejs"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dropzone": "^4.3.0"
+  }
+}

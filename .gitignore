@@ -1,0 +1,5 @@
+# NodeJS garbage
+node_modules
+
+# Bower garbage
+public/components
