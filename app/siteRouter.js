@@ -30,7 +30,7 @@ const uploadMiddleware = multer({
 });
 
 router.get('/', (req, res) => {
-  res.sendfile('public/test.html', {root: __dirname});
+  res.sendfile(__dirname+ '/public/test.html');
 });
 
 router.get('/photoUpload', uploadMiddleware.any(), (req, res) => {
