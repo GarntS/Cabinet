@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
   res.sendfile('public/test.html', {root: __dirname});
 });
 
-router.get('/photoUpload', uploadMiddleware, (req, res) => {
+router.get('/photoUpload', uploadMiddleware.any(), (req, res) => {
   console.log('Ran middleware.');
 });
 
